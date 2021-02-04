@@ -15,6 +15,7 @@
 		546C7DD425CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DD225CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld */; };
 		546C7DDF25CC17DA00796E7A /* Rico_DinheirinhoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DDE25CC17DA00796E7A /* Rico_DinheirinhoTests.swift */; };
 		546C7DEA25CC17DA00796E7A /* Rico_DinheirinhoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DE925CC17DA00796E7A /* Rico_DinheirinhoUITests.swift */; };
+		546C7DFB25CC18F500796E7A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 546C7DFA25CC18F500796E7A /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		546C7DE525CC17DA00796E7A /* Rico DinheirinhoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rico DinheirinhoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		546C7DE925CC17DA00796E7A /* Rico_DinheirinhoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rico_DinheirinhoUITests.swift; sourceTree = "<group>"; };
 		546C7DEB25CC17DA00796E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546C7DFA25CC18F500796E7A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		546C7DBB25CC17D900796E7A = {
 			isa = PBXGroup;
 			children = (
+				546C7DFA25CC18F500796E7A /* .gitignore */,
 				546C7DC625CC17D900796E7A /* Rico Dinheirinho */,
 				546C7DDD25CC17DA00796E7A /* Rico DinheirinhoTests */,
 				546C7DE825CC17DA00796E7A /* Rico DinheirinhoUITests */,
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				546C7DCF25CC17DA00796E7A /* Preview Assets.xcassets in Resources */,
+				546C7DFB25CC18F500796E7A /* .gitignore in Resources */,
 				546C7DCC25CC17DA00796E7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
