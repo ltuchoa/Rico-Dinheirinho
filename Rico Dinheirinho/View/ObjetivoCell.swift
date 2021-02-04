@@ -41,8 +41,8 @@ struct ObjetivoCell: View {
         .background(LinearGradient(gradient: Gradient(colors: [.primaryGreen, .secondaryGreen]), startPoint: .topLeading, endPoint: .bottomTrailing).opacity(0.9))
         .cornerRadius(20)
         .padding([.leading, .trailing], 30)
-        .padding(.top, 15)
-        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+        .padding([.top, .bottom], 7.5)
+        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
     }
 }
 

@@ -17,7 +17,7 @@ struct ObjetivosView: View {
         appearance.shadowColor = .clear
         appearance.largeTitleTextAttributes = [.foregroundColor: greenA]
         appearance.titleTextAttributes = [.foregroundColor: greenA]
-        appearance.backgroundColor = .white
+        appearance.backgroundColor = .systemBackground
 
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
@@ -61,5 +61,6 @@ struct ObjetivosView: View {
 struct ObjetivosView_Previews: PreviewProvider {
     static var previews: some View {
         ObjetivosView()
+            .preferredColorScheme(.light)
     }
 }
