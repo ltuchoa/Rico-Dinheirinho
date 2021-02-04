@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		546C7DC825CC17D900796E7A /* Rico_DinheirinhoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DC725CC17D900796E7A /* Rico_DinheirinhoApp.swift */; };
+		546C7DCA25CC17D900796E7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DC925CC17D900796E7A /* ContentView.swift */; };
+		546C7DCC25CC17DA00796E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546C7DCB25CC17DA00796E7A /* Assets.xcassets */; };
+		546C7DCF25CC17DA00796E7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546C7DCE25CC17DA00796E7A /* Preview Assets.xcassets */; };
+		546C7DD125CC17DA00796E7A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DD025CC17DA00796E7A /* Persistence.swift */; };
+		546C7DD425CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DD225CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld */; };
+		546C7DDF25CC17DA00796E7A /* Rico_DinheirinhoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DDE25CC17DA00796E7A /* Rico_DinheirinhoTests.swift */; };
+		546C7DEA25CC17DA00796E7A /* Rico_DinheirinhoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DE925CC17DA00796E7A /* Rico_DinheirinhoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		546C7DDB25CC17DA00796E7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 546C7DBC25CC17D900796E7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 546C7DC325CC17D900796E7A;
+			remoteInfo = "Rico Dinheirinho";
+		};
+		546C7DE625CC17DA00796E7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 546C7DBC25CC17D900796E7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 546C7DC325CC17D900796E7A;
+			remoteInfo = "Rico Dinheirinho";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		546C7DC425CC17D900796E7A /* Rico Dinheirinho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rico Dinheirinho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		546C7DC725CC17D900796E7A /* Rico_DinheirinhoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rico_DinheirinhoApp.swift; sourceTree = "<group>"; };
+		546C7DC925CC17D900796E7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		546C7DCB25CC17DA00796E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		546C7DCE25CC17DA00796E7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		546C7DD025CC17DA00796E7A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		546C7DD325CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rico_Dinheirinho.xcdatamodel; sourceTree = "<group>"; };
+		546C7DD525CC17DA00796E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546C7DDA25CC17DA00796E7A /* Rico DinheirinhoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rico DinheirinhoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		546C7DDE25CC17DA00796E7A /* Rico_DinheirinhoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rico_DinheirinhoTests.swift; sourceTree = "<group>"; };
+		546C7DE025CC17DA00796E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546C7DE525CC17DA00796E7A /* Rico DinheirinhoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rico DinheirinhoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		546C7DE925CC17DA00796E7A /* Rico_DinheirinhoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rico_DinheirinhoUITests.swift; sourceTree = "<group>"; };
+		546C7DEB25CC17DA00796E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		546C7DC125CC17D900796E7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546C7DD725CC17DA00796E7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546C7DE225CC17DA00796E7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		546C7DBB25CC17D900796E7A = {
+			isa = PBXGroup;
+			children = (
+				546C7DC625CC17D900796E7A /* Rico Dinheirinho */,
+				546C7DDD25CC17DA00796E7A /* Rico DinheirinhoTests */,
+				546C7DE825CC17DA00796E7A /* Rico DinheirinhoUITests */,
+				546C7DC525CC17D900796E7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		546C7DC525CC17D900796E7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				546C7DC425CC17D900796E7A /* Rico Dinheirinho.app */,
+				546C7DDA25CC17DA00796E7A /* Rico DinheirinhoTests.xctest */,
+				546C7DE525CC17DA00796E7A /* Rico DinheirinhoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		546C7DC625CC17D900796E7A /* Rico Dinheirinho */ = {
+			isa = PBXGroup;
+			children = (
+				546C7DC725CC17D900796E7A /* Rico_DinheirinhoApp.swift */,
+				546C7DC925CC17D900796E7A /* ContentView.swift */,
+				546C7DCB25CC17DA00796E7A /* Assets.xcassets */,
+				546C7DD025CC17DA00796E7A /* Persistence.swift */,
+				546C7DD525CC17DA00796E7A /* Info.plist */,
+				546C7DD225CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld */,
+				546C7DCD25CC17DA00796E7A /* Preview Content */,
+			);
+			path = "Rico Dinheirinho";
+			sourceTree = "<group>";
+		};
+		546C7DCD25CC17DA00796E7A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				546C7DCE25CC17DA00796E7A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		546C7DDD25CC17DA00796E7A /* Rico DinheirinhoTests */ = {
+			isa = PBXGroup;
+			children = (
+				546C7DDE25CC17DA00796E7A /* Rico_DinheirinhoTests.swift */,
+				546C7DE025CC17DA00796E7A /* Info.plist */,
+			);
+			path = "Rico DinheirinhoTests";
+			sourceTree = "<group>";
+		};
+		546C7DE825CC17DA00796E7A /* Rico DinheirinhoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				546C7DE925CC17DA00796E7A /* Rico_DinheirinhoUITests.swift */,
+				546C7DEB25CC17DA00796E7A /* Info.plist */,
+			);
+			path = "Rico DinheirinhoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		546C7DC325CC17D900796E7A /* Rico Dinheirinho */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546C7DEE25CC17DA00796E7A /* Build configuration list for PBXNativeTarget "Rico Dinheirinho" */;
+			buildPhases = (
+				546C7DC025CC17D900796E7A /* Sources */,
+				546C7DC125CC17D900796E7A /* Frameworks */,
+				546C7DC225CC17D900796E7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rico Dinheirinho";
+			productName = "Rico Dinheirinho";
+			productReference = 546C7DC425CC17D900796E7A /* Rico Dinheirinho.app */;
+			productType = "com.apple.product-type.application";
+		};
+		546C7DD925CC17DA00796E7A /* Rico DinheirinhoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546C7DF125CC17DA00796E7A /* Build configuration list for PBXNativeTarget "Rico DinheirinhoTests" */;
+			buildPhases = (
+				546C7DD625CC17DA00796E7A /* Sources */,
+				546C7DD725CC17DA00796E7A /* Frameworks */,
+				546C7DD825CC17DA00796E7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				546C7DDC25CC17DA00796E7A /* PBXTargetDependency */,
+			);
+			name = "Rico DinheirinhoTests";
+			productName = "Rico DinheirinhoTests";
+			productReference = 546C7DDA25CC17DA00796E7A /* Rico DinheirinhoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		546C7DE425CC17DA00796E7A /* Rico DinheirinhoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546C7DF425CC17DA00796E7A /* Build configuration list for PBXNativeTarget "Rico DinheirinhoUITests" */;
+			buildPhases = (
+				546C7DE125CC17DA00796E7A /* Sources */,
+				546C7DE225CC17DA00796E7A /* Frameworks */,
+				546C7DE325CC17DA00796E7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				546C7DE725CC17DA00796E7A /* PBXTargetDependency */,
+			);
+			name = "Rico DinheirinhoUITests";
+			productName = "Rico DinheirinhoUITests";
+			productReference = 546C7DE525CC17DA00796E7A /* Rico DinheirinhoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		546C7DBC25CC17D900796E7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					546C7DC325CC17D900796E7A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					546C7DD925CC17DA00796E7A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 546C7DC325CC17D900796E7A;
+					};
+					546C7DE425CC17DA00796E7A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 546C7DC325CC17D900796E7A;
+					};
+				};
+			};
+			buildConfigurationList = 546C7DBF25CC17D900796E7A /* Build configuration list for PBXProject "Rico Dinheirinho" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 546C7DBB25CC17D900796E7A;
+			productRefGroup = 546C7DC525CC17D900796E7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				546C7DC325CC17D900796E7A /* Rico Dinheirinho */,
+				546C7DD925CC17DA00796E7A /* Rico DinheirinhoTests */,
+				546C7DE425CC17DA00796E7A /* Rico DinheirinhoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		546C7DC225CC17D900796E7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546C7DCF25CC17DA00796E7A /* Preview Assets.xcassets in Resources */,
+				546C7DCC25CC17DA00796E7A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546C7DD825CC17DA00796E7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546C7DE325CC17DA00796E7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		546C7DC025CC17D900796E7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546C7DD125CC17DA00796E7A /* Persistence.swift in Sources */,
+				546C7DCA25CC17D900796E7A /* ContentView.swift in Sources */,
+				546C7DD425CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld in Sources */,
+				546C7DC825CC17D900796E7A /* Rico_DinheirinhoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546C7DD625CC17DA00796E7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546C7DDF25CC17DA00796E7A /* Rico_DinheirinhoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546C7DE125CC17DA00796E7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546C7DEA25CC17DA00796E7A /* Rico_DinheirinhoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		546C7DDC25CC17DA00796E7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 546C7DC325CC17D900796E7A /* Rico Dinheirinho */;
+			targetProxy = 546C7DDB25CC17DA00796E7A /* PBXContainerItemProxy */;
+		};
+		546C7DE725CC17DA00796E7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 546C7DC325CC17D900796E7A /* Rico Dinheirinho */;
+			targetProxy = 546C7DE625CC17DA00796E7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		546C7DEC25CC17DA00796E7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		546C7DED25CC17DA00796E7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		546C7DEF25CC17DA00796E7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Rico Dinheirinho/Preview Content\"";
+				DEVELOPMENT_TEAM = F6Y37ZBVE7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Rico Dinheirinho/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ltuchoa.Rico-Dinheirinho";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		546C7DF025CC17DA00796E7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Rico Dinheirinho/Preview Content\"";
+				DEVELOPMENT_TEAM = F6Y37ZBVE7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Rico Dinheirinho/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ltuchoa.Rico-Dinheirinho";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		546C7DF225CC17DA00796E7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6Y37ZBVE7;
+				INFOPLIST_FILE = "Rico DinheirinhoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ltuchoa.Rico-DinheirinhoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rico Dinheirinho.app/Rico Dinheirinho";
+			};
+			name = Debug;
+		};
+		546C7DF325CC17DA00796E7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6Y37ZBVE7;
+				INFOPLIST_FILE = "Rico DinheirinhoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ltuchoa.Rico-DinheirinhoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rico Dinheirinho.app/Rico Dinheirinho";
+			};
+			name = Release;
+		};
+		546C7DF525CC17DA00796E7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6Y37ZBVE7;
+				INFOPLIST_FILE = "Rico DinheirinhoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ltuchoa.Rico-DinheirinhoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rico Dinheirinho";
+			};
+			name = Debug;
+		};
+		546C7DF625CC17DA00796E7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6Y37ZBVE7;
+				INFOPLIST_FILE = "Rico DinheirinhoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ltuchoa.Rico-DinheirinhoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rico Dinheirinho";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		546C7DBF25CC17D900796E7A /* Build configuration list for PBXProject "Rico Dinheirinho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546C7DEC25CC17DA00796E7A /* Debug */,
+				546C7DED25CC17DA00796E7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546C7DEE25CC17DA00796E7A /* Build configuration list for PBXNativeTarget "Rico Dinheirinho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546C7DEF25CC17DA00796E7A /* Debug */,
+				546C7DF025CC17DA00796E7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546C7DF125CC17DA00796E7A /* Build configuration list for PBXNativeTarget "Rico DinheirinhoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546C7DF225CC17DA00796E7A /* Debug */,
+				546C7DF325CC17DA00796E7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546C7DF425CC17DA00796E7A /* Build configuration list for PBXNativeTarget "Rico DinheirinhoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546C7DF525CC17DA00796E7A /* Debug */,
+				546C7DF625CC17DA00796E7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		546C7DD225CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				546C7DD325CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodel */,
+			);
+			currentVersion = 546C7DD325CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodel */;
+			path = Rico_Dinheirinho.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 546C7DBC25CC17D900796E7A /* Project object */;
+}
