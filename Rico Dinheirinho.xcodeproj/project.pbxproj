@@ -17,6 +17,7 @@
 		546C7DEA25CC17DA00796E7A /* Rico_DinheirinhoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DE925CC17DA00796E7A /* Rico_DinheirinhoUITests.swift */; };
 		546C7DFB25CC18F500796E7A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 546C7DFA25CC18F500796E7A /* .gitignore */; };
 		546C7E0425CC218200796E7A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E0325CC218200796E7A /* Colors.swift */; };
+		546C7E1C25CC252900796E7A /* ObjetivoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E1B25CC252900796E7A /* ObjetivoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		546C7DEB25CC17DA00796E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		546C7DFA25CC18F500796E7A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		546C7E0325CC218200796E7A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		546C7E1B25CC252900796E7A /* ObjetivoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,7 @@
 				546C7E0225CC216600796E7A /* Extensions */,
 				546C7E0125CC215F00796E7A /* Model */,
 				546C7E0025CC215700796E7A /* ViewModel */,
-				546C7DFF25CC215200796E7A /* View */,
+				546C7E1A25CC24FC00796E7A /* View */,
 				546C7DC725CC17D900796E7A /* Rico_DinheirinhoApp.swift */,
 				546C7DC925CC17D900796E7A /* ContentView.swift */,
 				546C7DCB25CC17DA00796E7A /* Assets.xcassets */,
@@ -145,13 +147,6 @@
 			path = "Rico DinheirinhoUITests";
 			sourceTree = "<group>";
 		};
-		546C7DFF25CC215200796E7A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		546C7E0025CC215700796E7A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +167,14 @@
 				546C7E0325CC218200796E7A /* Colors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		546C7E1A25CC24FC00796E7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				546C7E1B25CC252900796E7A /* ObjetivoCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +310,7 @@
 				546C7DD125CC17DA00796E7A /* Persistence.swift in Sources */,
 				546C7E0425CC218200796E7A /* Colors.swift in Sources */,
 				546C7DCA25CC17D900796E7A /* ContentView.swift in Sources */,
+				546C7E1C25CC252900796E7A /* ObjetivoCell.swift in Sources */,
 				546C7DD425CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld in Sources */,
 				546C7DC825CC17D900796E7A /* Rico_DinheirinhoApp.swift in Sources */,
 			);
