@@ -9,20 +9,6 @@ import SwiftUI
 
 struct ObjetivosView: View {
 
-    init() {
-        let greenA: UIColor = UIColor(red: 58/255, green: 171/255, blue: 71/255, alpha: 1.0)
-
-
-        let appearance = UINavigationBarAppearance()
-        appearance.shadowColor = .clear
-        appearance.largeTitleTextAttributes = [.foregroundColor: greenA]
-        appearance.titleTextAttributes = [.foregroundColor: greenA]
-        appearance.backgroundColor = .systemBackground
-
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().prefersLargeTitles = true
-    }
 
     var body: some View {
         NavigationView {
@@ -40,19 +26,26 @@ struct ObjetivosView: View {
                     ObjetivoCell()
                 }.padding(.bottom, 20)
             }
-            .contentShape(Rectangle())
-//            .clipped()
+            .clipped()
+            .background(Color(UIColor.systemBackground))
 
+            .onAppear() {
+                let greenA: UIColor = UIColor(red: 58/255, green: 171/255, blue: 71/255, alpha: 1.0)
+
+                UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: greenA]
+                UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: greenA]
+
+            }
             .navigationBarTitle("Objetivos", displayMode: .large)
             .navigationBarItems(trailing:
-                NavigationLink(destination: NovoObjetivoView()) {
-                    Image(systemName: "plus.circle.fill").imageScale(.large)
-                }
-                .foregroundColor(.primaryGreen)
-            )
-            .navigationBarTitleDisplayMode(.large)
+                                    NavigationLink(destination: NovoObjetivoView()) {
+                                        Image(systemName: "plus.circle.fill").imageScale(.large)
+                                    }
 
-        }.accentColor(.primaryGreen)
+                                    .foregroundColor(.primaryGreen)
+            )
+        }
+        .accentColor(.primaryGreen)
     }
 }
 
