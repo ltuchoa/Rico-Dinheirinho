@@ -19,6 +19,7 @@
 		546C7E0425CC218200796E7A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E0325CC218200796E7A /* Colors.swift */; };
 		546C7E1C25CC252900796E7A /* ObjetivoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E1B25CC252900796E7A /* ObjetivoCell.swift */; };
 		546C7E2425CC325500796E7A /* ObjetivosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E2325CC325500796E7A /* ObjetivosView.swift */; };
+		548CC3F625CCBDC80098EF5A /* NovoObjetivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		546C7E0325CC218200796E7A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		546C7E1B25CC252900796E7A /* ObjetivoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivoCell.swift; sourceTree = "<group>"; };
 		546C7E2325CC325500796E7A /* ObjetivosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivosView.swift; sourceTree = "<group>"; };
+		548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoObjetivoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				546C7E1B25CC252900796E7A /* ObjetivoCell.swift */,
 				546C7E2325CC325500796E7A /* ObjetivosView.swift */,
+				548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548CC3F625CCBDC80098EF5A /* NovoObjetivoView.swift in Sources */,
 				546C7DD125CC17DA00796E7A /* Persistence.swift in Sources */,
 				546C7E2425CC325500796E7A /* ObjetivosView.swift in Sources */,
 				546C7E0425CC218200796E7A /* Colors.swift in Sources */,

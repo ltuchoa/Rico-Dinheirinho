@@ -41,20 +41,18 @@ struct ObjetivosView: View {
                 }.padding(.bottom, 20)
             }
             .contentShape(Rectangle())
-            .clipped()
+//            .clipped()
 
             .navigationBarTitle("Objetivos", displayMode: .large)
             .navigationBarItems(trailing:
-                Button(action: {
-                    print("Novo Objetivo")
-                }) {
+                NavigationLink(destination: NovoObjetivoView()) {
                     Image(systemName: "plus.circle.fill").imageScale(.large)
                 }
                 .foregroundColor(.primaryGreen)
             )
             .navigationBarTitleDisplayMode(.large)
 
-        }
+        }.accentColor(.primaryGreen)
     }
 }
 
