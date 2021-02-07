@@ -14,7 +14,9 @@ struct ObjetivosView: View {
         NavigationView {
             ScrollView {
                 LazyVStack {
-                    ObjetivoCell()
+                    NavigationLink(destination: DescricaoObjetivoView()){
+                        ObjetivoCell()
+                    }
                     ObjetivoCell()
                     ObjetivoCell()
                     ObjetivoCell()

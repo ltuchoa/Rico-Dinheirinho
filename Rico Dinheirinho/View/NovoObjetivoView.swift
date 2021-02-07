@@ -16,12 +16,6 @@ struct NovoObjetivoView: View {
     var items = ["airplane", "car.fill", "map.fill", "gamecontroller.fill", "gift.fill", "tv.fill", "guitars.fill"]
     @State private var presentPicker = false
 
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter
-    }
-
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {

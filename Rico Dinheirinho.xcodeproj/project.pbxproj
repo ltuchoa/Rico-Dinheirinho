@@ -19,6 +19,7 @@
 		546C7E0425CC218200796E7A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E0325CC218200796E7A /* Colors.swift */; };
 		546C7E1C25CC252900796E7A /* ObjetivoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E1B25CC252900796E7A /* ObjetivoCell.swift */; };
 		546C7E2425CC325500796E7A /* ObjetivosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E2325CC325500796E7A /* ObjetivosView.swift */; };
+		547041E025CF792E005D12D4 /* DescricaoObjetivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */; };
 		548CC3F625CCBDC80098EF5A /* NovoObjetivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */; };
 		54BD8EA325CD732800126F9E /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD8EA225CD732800126F9E /* CustomPickerView.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		546C7E0325CC218200796E7A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		546C7E1B25CC252900796E7A /* ObjetivoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivoCell.swift; sourceTree = "<group>"; };
 		546C7E2325CC325500796E7A /* ObjetivosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivosView.swift; sourceTree = "<group>"; };
+		547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoObjetivoView.swift; sourceTree = "<group>"; };
 		548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoObjetivoView.swift; sourceTree = "<group>"; };
 		54BD8EA225CD732800126F9E /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +184,7 @@
 				546C7E2325CC325500796E7A /* ObjetivosView.swift */,
 				548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */,
 				54BD8EA225CD732800126F9E /* CustomPickerView.swift */,
+				547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				546C7E0425CC218200796E7A /* Colors.swift in Sources */,
 				546C7DCA25CC17D900796E7A /* ContentView.swift in Sources */,
 				546C7E1C25CC252900796E7A /* ObjetivoCell.swift in Sources */,
+				547041E025CF792E005D12D4 /* DescricaoObjetivoView.swift in Sources */,
 				54BD8EA325CD732800126F9E /* CustomPickerView.swift in Sources */,
 				546C7DD425CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld in Sources */,
 				546C7DC825CC17D900796E7A /* Rico_DinheirinhoApp.swift in Sources */,

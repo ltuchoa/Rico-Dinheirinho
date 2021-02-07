@@ -10,4 +10,5 @@ import SwiftUI
 extension Color {
     static let primaryGreen = Color("PrimaryGreen")
     static let secondaryGreen = Color("SecondaryGreen")
+    static let darkGreen = Color("DarkGreen")
 }
