@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,10 @@
 		546C7E2425CC325500796E7A /* ObjetivosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E2325CC325500796E7A /* ObjetivosView.swift */; };
 		547041E025CF792E005D12D4 /* DescricaoObjetivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */; };
 		548CC3F625CCBDC80098EF5A /* NovoObjetivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */; };
+		54ADB9E125D2B40C00CA1C9F /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 54ADB9E025D2B40C00CA1C9F /* ToastUI */; };
+		54ADB9E725D2BEB200CA1C9F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 54ADB9E625D2BEB200CA1C9F /* Lottie */; };
+		54ADB9EC25D2BEBF00CA1C9F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADB9EB25D2BEBF00CA1C9F /* LottieView.swift */; };
+		54ADB9F125D2BF1600CA1C9F /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 54ADB9F025D2BF1600CA1C9F /* animation.json */; };
 		54BD8EA325CD732800126F9E /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD8EA225CD732800126F9E /* CustomPickerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,8 @@
 		546C7E2325CC325500796E7A /* ObjetivosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivosView.swift; sourceTree = "<group>"; };
 		547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoObjetivoView.swift; sourceTree = "<group>"; };
 		548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoObjetivoView.swift; sourceTree = "<group>"; };
+		54ADB9EB25D2BEBF00CA1C9F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		54ADB9F025D2BF1600CA1C9F /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
 		54BD8EA225CD732800126F9E /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ADB9E125D2B40C00CA1C9F /* ToastUI in Frameworks */,
+				54ADB9E725D2BEB200CA1C9F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +126,7 @@
 		546C7DC625CC17D900796E7A /* Rico Dinheirinho */ = {
 			isa = PBXGroup;
 			children = (
+				54ADB9F025D2BF1600CA1C9F /* animation.json */,
 				546C7E0225CC216600796E7A /* Extensions */,
 				546C7E0125CC215F00796E7A /* Model */,
 				546C7E0025CC215700796E7A /* ViewModel */,
@@ -191,6 +200,7 @@
 				548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */,
 				54BD8EA225CD732800126F9E /* CustomPickerView.swift */,
 				547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */,
+				54ADB9EB25D2BEBF00CA1C9F /* LottieView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +221,10 @@
 			dependencies = (
 			);
 			name = "Rico Dinheirinho";
+			packageProductDependencies = (
+				54ADB9E025D2B40C00CA1C9F /* ToastUI */,
+				54ADB9E625D2BEB200CA1C9F /* Lottie */,
+			);
 			productName = "Rico Dinheirinho";
 			productReference = 546C7DC425CC17D900796E7A /* Rico Dinheirinho.app */;
 			productType = "com.apple.product-type.application";
@@ -279,9 +293,13 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"pt-BR",
 			);
 			mainGroup = 546C7DBB25CC17D900796E7A;
+			packageReferences = (
+				54ADB9DF25D2B40C00CA1C9F /* XCRemoteSwiftPackageReference "ToastUI" */,
+				54ADB9E525D2BEB200CA1C9F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 546C7DC525CC17D900796E7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,6 +318,7 @@
 			files = (
 				546C7DCF25CC17DA00796E7A /* Preview Assets.xcassets in Resources */,
 				546C7DFB25CC18F500796E7A /* .gitignore in Resources */,
+				54ADB9F125D2BF1600CA1C9F /* animation.json in Resources */,
 				546C7DCC25CC17DA00796E7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +352,7 @@
 				547041E025CF792E005D12D4 /* DescricaoObjetivoView.swift in Sources */,
 				5432F41225D169EC002AC871 /* Objetivo+CoreDataProperties.swift in Sources */,
 				54BD8EA325CD732800126F9E /* CustomPickerView.swift in Sources */,
+				54ADB9EC25D2BEBF00CA1C9F /* LottieView.swift in Sources */,
 				5409D28325D171860041AB4B /* ObjetivoViewModel.swift in Sources */,
 				546C7DD425CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld in Sources */,
 				5432F41125D169EC002AC871 /* Objetivo+CoreDataClass.swift in Sources */,
@@ -656,6 +676,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54ADB9DF25D2B40C00CA1C9F /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		54ADB9E525D2BEB200CA1C9F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54ADB9E025D2B40C00CA1C9F /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54ADB9DF25D2B40C00CA1C9F /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
+		};
+		54ADB9E625D2BEB200CA1C9F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54ADB9E525D2BEB200CA1C9F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		546C7DD225CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld */ = {

@@ -6,13 +6,19 @@
 //
 
 import SwiftUI
+import ToastUI
 
 struct DescricaoObjetivoView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject private var objetivoViewModel: ObjetivoViewModel = ObjetivoViewModel()
 
-    var objetivo = Objetivo()
+    @State private var presentingToast: Bool = false
+    @State private var presentingAnimation: Bool = false
+    @State private var valor: String = ""
+    @State var modo: String = ""
+
+    @State var objetivo = Objetivo()
 
     var body: some View {
         VStack {
@@ -35,12 +41,9 @@ struct DescricaoObjetivoView: View {
 
                     HStack(spacing: 20) {
                         Button(action: {
-                            // What to perform
-                            objetivo.valorDepositado -= 50
-                            objetivoViewModel.update(viewContext: viewContext, objetivo: objetivo)
-                            print(objetivo.valorDepositado)
+                            presentingToast = true
+                            modo = "Retirar"
                         }) {
-                            // How the button looks like
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)
                                     .foregroundColor(.darkGreen).opacity(0.6)
@@ -54,11 +57,16 @@ struct DescricaoObjetivoView: View {
                         }.frame(width: 100, height: 34, alignment: .center)
                         .shadow(color: Color.black.opacity(0.12), radius: 4, x: 0, y: 2)
 
+                        .toast(isPresented: $presentingToast) {
+                            ToastView {
+                                ToastViewContent(isShowing: $presentingAnimation, valor: $valor, presentingToast: $presentingToast, presentingAnimation: $presentingAnimation, objetivo: $objetivo, modo: $modo).environment(\.managedObjectContext, self.viewContext)
+                            }
+                        }
+
                         Button(action: {
                             // What to perform
-                            objetivo.valorDepositado += 50
-                            objetivoViewModel.update(viewContext: viewContext, objetivo: objetivo)
-                            print(objetivo.valorDepositado)
+                            presentingToast = true
+                            modo = "Depositar"
                         }) {
                             // How the button looks like
                             ZStack {
@@ -91,7 +99,7 @@ struct DescricaoObjetivoView: View {
                 Text("Data Prevista")
                     .font(.system(size: 20, weight: .medium, design: .default))
                     .padding(.bottom, 1)
-                Text(objetivo.data.description.dropLast(15))
+                Text(objetivo.data, style: .date)
                     .font(.system(size: 18, weight: .regular, design: .default))
                     .padding(.bottom, 10)
 
@@ -164,6 +172,96 @@ struct ProgressBar2: View {
                     .padding(.leading, 1)
             }.cornerRadius(45.0)
         }
+    }
+}
+
+struct ToastViewContent: View {
+    @Binding var isShowing: Bool
+    @Binding var valor: String
+    @Binding var presentingToast: Bool
+    @Binding var presentingAnimation: Bool
+    @Binding var objetivo: Objetivo
+    @Binding var modo: String
+
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject private var objetivoViewModel: ObjetivoViewModel = ObjetivoViewModel()
+
+    var body: some View {
+        if !isShowing {
+            VStack(alignment: .center) {
+                Text("Quanto gostaria de \(modo)?")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: 18, weight: .regular, design: .default))
+                    .padding(.horizontal, 10)
+
+                TextField("Digite um valor", text: $valor)
+                    .keyboardType(.decimalPad)
+                    .textFieldStyle(BottomLineTextFieldStyle())
+                    .frame(minWidth: 80, idealWidth: 100, maxWidth: 200)
+                    .padding(.top, 15)
+
+                HStack(spacing: 20) {
+                    Button(action: {
+                        presentingToast = false
+                    }) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(Color(UIColor.systemRed)).opacity(0.8)
+                                .frame(width: 90, height: 34)
+                            Text("Cancelar")
+                                .foregroundColor(.white)
+                                .font(.system(size: 17, weight: .regular, design: .default))
+                        }
+                    }
+
+                    Button(action: {
+                        if modo == "Retirar" {
+                            objetivo.valorDepositado -= Double(valor) ?? 0
+                        } else {
+                            objetivo.valorDepositado += Double(valor) ?? 0
+                        }
+                        objetivoViewModel.update(viewContext: viewContext, objetivo: objetivo)
+                        valor = ""
+                        presentingAnimation = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+                            presentingToast = false
+                            presentingAnimation = false
+                        }
+                    }) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(.darkGreen)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.darkGreen, lineWidth: 0.5)
+                                )
+                                .frame(width: 90, height: 34)
+                            Text(modo)
+                                .foregroundColor(.white)
+                                .font(.system(size: 17, weight: .regular, design: .default))
+                        }
+                    }
+                }.padding(.top, 20)
+            }.padding(.vertical, 15)
+        } else {
+            LottieView(name: "animation", play: $isShowing)
+                .frame(width: 200, height: 200)
+        }
+
+    }
+}
+
+struct BottomLineTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        VStack() {
+            configuration
+            Rectangle()
+                .frame(height: 0.5, alignment: .bottom)
+                .foregroundColor(.primaryGreen)
+                .accentColor(.primaryGreen)
+        }
+        .foregroundColor(.primaryGreen)
+        .accentColor(.primaryGreen)
     }
 }
 

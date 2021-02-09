@@ -9,6 +9,8 @@ import SwiftUI
 
 struct NovoObjetivoView: View {
 
+    @Environment(\.presentationMode) var presentationMode
+
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject private var objetivoViewModel: ObjetivoViewModel = ObjetivoViewModel()
 
@@ -82,6 +84,7 @@ struct NovoObjetivoView: View {
             .navigationBarItems(trailing:
                                     Button(action: {
                                         objetivoViewModel.save(viewContext: viewContext, nome: nome, valor: valor, data: data, icone: icone)
+                                        self.presentationMode.wrappedValue.dismiss()
                                     }) {
                                         Text("Salvar")
                                     }
