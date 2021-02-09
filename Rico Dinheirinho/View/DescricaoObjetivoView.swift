@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct DescricaoObjetivoView: View {
-    @State var progressValue: Float = 0.44
+
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject private var objetivoViewModel: ObjetivoViewModel = ObjetivoViewModel()
+
+    var objetivo = Objetivo()
 
     var body: some View {
         VStack {
             ZStack {
                 VStack(alignment: .center) {
-                    Text(Image(systemName: "airplane"))
+                    Text(Image(systemName: objetivo.icone))
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .font(.system(size: 34))
@@ -24,7 +28,7 @@ struct DescricaoObjetivoView: View {
                                 .foregroundColor(.white).opacity(0.3).blur(radius: 1.0)
                         )
 
-                    Text("Viagens")
+                    Text(objetivo.nome)
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                         .font(.system(size: 22))
@@ -32,14 +36,17 @@ struct DescricaoObjetivoView: View {
                     HStack(spacing: 20) {
                         Button(action: {
                             // What to perform
+                            objetivo.valorDepositado -= 50
+                            objetivoViewModel.update(viewContext: viewContext, objetivo: objetivo)
+                            print(objetivo.valorDepositado)
                         }) {
                             // How the button looks like
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)
-                                    .foregroundColor(.primaryGreen).opacity(0.6)
+                                    .foregroundColor(.darkGreen).opacity(0.6)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 20)
-                                            .stroke(Color.darkGreen, lineWidth: 1.5)
+                                            .stroke(Color.darkGreen, lineWidth: 0.5)
                                     )
                                 Text("Retirar")
                                     .foregroundColor(.white)
@@ -49,14 +56,17 @@ struct DescricaoObjetivoView: View {
 
                         Button(action: {
                             // What to perform
+                            objetivo.valorDepositado += 50
+                            objetivoViewModel.update(viewContext: viewContext, objetivo: objetivo)
+                            print(objetivo.valorDepositado)
                         }) {
                             // How the button looks like
                             ZStack {
                                 RoundedRectangle(cornerRadius: 20)
-                                    .foregroundColor(.darkGreen)
+                                    .foregroundColor(.darkGreen).opacity(0.9)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 20)
-                                            .stroke(Color.primaryGreen, lineWidth: 0.5)
+                                            .stroke(Color.darkGreen, lineWidth: 0.5)
                                     )
                                 Text("Depositar")
                                     .foregroundColor(.white)
@@ -81,7 +91,7 @@ struct DescricaoObjetivoView: View {
                 Text("Data Prevista")
                     .font(.system(size: 20, weight: .medium, design: .default))
                     .padding(.bottom, 1)
-                Text("21/03/2021")
+                Text(objetivo.data.description.dropLast(15))
                     .font(.system(size: 18, weight: .regular, design: .default))
                     .padding(.bottom, 10)
 
@@ -89,16 +99,16 @@ struct DescricaoObjetivoView: View {
                     .font(.system(size: 20, weight: .medium, design: .default))
                     .padding(.bottom, 1)
                 HStack(spacing: 0) {
-                    Text("R$ 500.00")
+                    Text(String(format: "R$ %.2f", objetivo.valorDepositado))
                         .font(.system(size: 18, weight: .regular, design: .default))
-                    Text("/R$ 1500.00")
+                    Text(String(format: "/R$ %.2f", objetivo.valorTotal))
                         .font(.system(size: 18, weight: .regular, design: .default))
                         .foregroundColor(.gray)
                 }
 
                 ZStack {
-                    ProgressBar2(value: $progressValue).frame(height: 28)
-                    Text("44%")
+                    ProgressBar2(value: objetivo.progress).frame(height: 28)
+                    Text("\(Int(objetivo.progress*100))%")
                         .font(.system(size: 15, weight: .medium, design: .default))
                         .foregroundColor(.white)
                 }.padding([.trailing, .leading], 60)
@@ -108,15 +118,15 @@ struct DescricaoObjetivoView: View {
                     .resizable()
                     .scaledToFit()
                     .padding(.bottom, -5)
-                    .frame(minWidth: 100, idealWidth: 100, maxWidth: 140, minHeight: 160, idealHeight: 160, maxHeight: 200, alignment: .bottom)
+                    .frame(minWidth: 60, idealWidth: 90, maxWidth: 130, minHeight: 80, idealHeight: 160, maxHeight: 200, alignment: .bottom)
             }
 
         }
         .navigationBarItems(trailing:
                                 Button(action: {
-                                    print("Novo Objetivo")
+                                    objetivoViewModel.delete(viewContext: viewContext, objetivo: objetivo)
                                 }) {
-                                    Text("Salvar")
+                                    Text(Image(systemName: "trash.fill"))
                                 }
             .foregroundColor(.white)
         )
@@ -136,7 +146,7 @@ struct RoundedCorner: Shape {
 }
 
 struct ProgressBar2: View {
-    @Binding var value: Float
+    var value: Float
 
     var body: some View {
         GeometryReader { geometry in
@@ -160,5 +170,6 @@ struct ProgressBar2: View {
 struct DescricaoObjetivoView_Previews: PreviewProvider {
     static var previews: some View {
         DescricaoObjetivoView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

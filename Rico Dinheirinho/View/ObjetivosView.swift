@@ -9,24 +9,29 @@ import SwiftUI
 
 struct ObjetivosView: View {
 
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(entity: Objetivo.entity(), sortDescriptors: [NSSortDescriptor(key: "nome", ascending: true)])
+    
+    var objetivos: FetchedResults<Objetivo>
 
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVStack {
-                    NavigationLink(destination: DescricaoObjetivoView()){
-                        ObjetivoCell()
+                    if !objetivos.isEmpty {
+                        ForEach(objetivos) { objetivo in
+                            NavigationLink(destination: DescricaoObjetivoView(objetivo: objetivo)) {
+                                ObjetivoCell(objetivo: objetivo)
+                            }
+                        }
+                    } else {
+                        Text("Você não possui objetivos!")
+                            .font(.system(size: 24, weight: .regular, design: .default))
+                            .padding(.vertical, UIScreen.main.bounds.height/3)
                     }
-                    ObjetivoCell()
-                    ObjetivoCell()
-                    ObjetivoCell()
-                    ObjetivoCell()
-                    ObjetivoCell()
-                    ObjetivoCell()
-                    ObjetivoCell()
-                    ObjetivoCell()
-                    ObjetivoCell()
-                }.padding(.bottom, 20)
+
+                }.padding([.top, .bottom], 10)
             }
             .clipped()
             .background(Color(UIColor.systemBackground))
@@ -55,5 +60,6 @@ struct ObjetivosView_Previews: PreviewProvider {
     static var previews: some View {
         ObjetivosView()
             .preferredColorScheme(.light)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

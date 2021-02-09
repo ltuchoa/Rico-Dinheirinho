@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct ObjetivoCell: View {
-    @State var progressValue: Float = 0.44
+
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject private var objetivoViewModel: ObjetivoViewModel = ObjetivoViewModel()
+
+    var objetivo = Objetivo()
 
     var body: some View {
         ZStack {
             HStack {
-                Text(Image(systemName: "airplane"))
+                Text(Image(systemName: objetivo.icone))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .font(.system(size: 34))
 
                 VStack(alignment: .leading) {
-                    Text("Viagem")
+                    Text(objetivo.nome)
                         .fontWeight(.medium)
                         .foregroundColor(.white)
                         .font(.system(size: 20))
 
                     HStack {
-                        ProgressBar(value: $progressValue).frame(height: 18)
+                        ProgressBar(value: objetivo.progress).frame(height: 18)
 
-                        Text("44%")
+                        Text("\(Int(objetivo.progress*100))%")
                             .fontWeight(.regular)
                             .foregroundColor(.white)
                             .font(.system(size: 16))
@@ -47,7 +51,7 @@ struct ObjetivoCell: View {
 }
 
 struct ProgressBar: View {
-    @Binding var value: Float
+    var value: Float
 
     var body: some View {
         GeometryReader { geometry in
@@ -68,6 +72,7 @@ struct ProgressBar: View {
 
 struct ObjetivoCell_Previews: PreviewProvider {
     static var previews: some View {
-        ObjetivoCell()
+        ObjetivoCell(objetivo: Objetivo())
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

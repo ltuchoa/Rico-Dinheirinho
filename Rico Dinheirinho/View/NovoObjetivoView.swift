@@ -9,10 +9,14 @@ import SwiftUI
 
 struct NovoObjetivoView: View {
 
+    @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject private var objetivoViewModel: ObjetivoViewModel = ObjetivoViewModel()
+
     @State private var nome: String = ""
     @State private var valor: String = ""
     @State private var icone: String = "square.and.pencil"
     @State private var data = Date()
+
     var items = ["airplane", "car.fill", "map.fill", "gamecontroller.fill", "gift.fill", "tv.fill", "guitars.fill"]
     @State private var presentPicker = false
 
@@ -35,7 +39,7 @@ struct NovoObjetivoView: View {
                     .padding(.top, 15)
                     .font(.system(size: 20, weight: .medium, design: .default))
                 TextField("Digite o valor do objetivo", text: $valor)
-                    .keyboardType(.numbersAndPunctuation)
+                    .keyboardType(.decimalPad)
                     .textFieldStyle(SuperCustomTextFieldStyle())
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -77,7 +81,7 @@ struct NovoObjetivoView: View {
             .navigationBarTitle("Novo Objetivo", displayMode: .large)
             .navigationBarItems(trailing:
                                     Button(action: {
-                                        print("Novo Objetivo")
+                                        objetivoViewModel.save(viewContext: viewContext, nome: nome, valor: valor, data: data, icone: icone)
                                     }) {
                                         Text("Salvar")
                                     }
@@ -120,5 +124,6 @@ struct SuperCustomTextFieldStyle: TextFieldStyle {
 struct NovoObjetivoView_Previews: PreviewProvider {
     static var previews: some View {
         NovoObjetivoView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
