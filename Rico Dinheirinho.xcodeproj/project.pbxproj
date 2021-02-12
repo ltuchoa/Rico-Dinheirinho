@@ -3,12 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540929A325D69DDE00EFBDD1 /* NovoObjetivoUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540929A225D69DDE00EFBDD1 /* NovoObjetivoUITest.swift */; };
+		540929AB25D69EA800EFBDD1 /* DescricaoObjetivoRetirarUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540929AA25D69EA800EFBDD1 /* DescricaoObjetivoRetirarUITest.swift */; };
+		540929B625D6AA5D00EFBDD1 /* DescricaoObjetivoDepositarUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540929B525D6AA5D00EFBDD1 /* DescricaoObjetivoDepositarUITest.swift */; };
+		540929BE25D6AA8800EFBDD1 /* NovoObjetivoSalvarUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540929BD25D6AA8800EFBDD1 /* NovoObjetivoSalvarUITest.swift */; };
+		5409D28325D171860041AB4B /* ObjetivoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5409D28225D171860041AB4B /* ObjetivoViewModel.swift */; };
+		5432F41125D169EC002AC871 /* Objetivo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5432F40F25D169EC002AC871 /* Objetivo+CoreDataClass.swift */; };
+		5432F41225D169EC002AC871 /* Objetivo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5432F41025D169EC002AC871 /* Objetivo+CoreDataProperties.swift */; };
+		543376C525D59BFB002597D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543376C425D59BFB002597D2 /* LaunchScreen.storyboard */; };
 		546C7DC825CC17D900796E7A /* Rico_DinheirinhoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DC725CC17D900796E7A /* Rico_DinheirinhoApp.swift */; };
-		546C7DCA25CC17D900796E7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DC925CC17D900796E7A /* ContentView.swift */; };
 		546C7DCC25CC17DA00796E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546C7DCB25CC17DA00796E7A /* Assets.xcassets */; };
 		546C7DCF25CC17DA00796E7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546C7DCE25CC17DA00796E7A /* Preview Assets.xcassets */; };
 		546C7DD125CC17DA00796E7A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DD025CC17DA00796E7A /* Persistence.swift */; };
@@ -17,6 +24,17 @@
 		546C7DEA25CC17DA00796E7A /* Rico_DinheirinhoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7DE925CC17DA00796E7A /* Rico_DinheirinhoUITests.swift */; };
 		546C7DFB25CC18F500796E7A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 546C7DFA25CC18F500796E7A /* .gitignore */; };
 		546C7E0425CC218200796E7A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E0325CC218200796E7A /* Colors.swift */; };
+		546C7E1C25CC252900796E7A /* ObjetivoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E1B25CC252900796E7A /* ObjetivoCell.swift */; };
+		546C7E2425CC325500796E7A /* ObjetivosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546C7E2325CC325500796E7A /* ObjetivosView.swift */; };
+		547041E025CF792E005D12D4 /* DescricaoObjetivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */; };
+		548CC3F625CCBDC80098EF5A /* NovoObjetivoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */; };
+		54972F4025D6B775005FAFCC /* ObjetivosViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54972F3F25D6B775005FAFCC /* ObjetivosViewModelTests.swift */; };
+		549EE7C225D42BAD004FFFE6 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549EE7C125D42BAD004FFFE6 /* Keyboard.swift */; };
+		54ADB9E125D2B40C00CA1C9F /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 54ADB9E025D2B40C00CA1C9F /* ToastUI */; };
+		54ADB9E725D2BEB200CA1C9F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 54ADB9E625D2BEB200CA1C9F /* Lottie */; };
+		54ADB9EC25D2BEBF00CA1C9F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADB9EB25D2BEBF00CA1C9F /* LottieView.swift */; };
+		54ADB9F125D2BF1600CA1C9F /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 54ADB9F025D2BF1600CA1C9F /* animation.json */; };
+		54BD8EA325CD732800126F9E /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD8EA225CD732800126F9E /* CustomPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		540929A225D69DDE00EFBDD1 /* NovoObjetivoUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoObjetivoUITest.swift; sourceTree = "<group>"; };
+		540929AA25D69EA800EFBDD1 /* DescricaoObjetivoRetirarUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoObjetivoRetirarUITest.swift; sourceTree = "<group>"; };
+		540929B525D6AA5D00EFBDD1 /* DescricaoObjetivoDepositarUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoObjetivoDepositarUITest.swift; sourceTree = "<group>"; };
+		540929BD25D6AA8800EFBDD1 /* NovoObjetivoSalvarUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoObjetivoSalvarUITest.swift; sourceTree = "<group>"; };
+		5409D28225D171860041AB4B /* ObjetivoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivoViewModel.swift; sourceTree = "<group>"; };
+		5432F40F25D169EC002AC871 /* Objetivo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Objetivo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5432F41025D169EC002AC871 /* Objetivo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Objetivo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		543376C425D59BFB002597D2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		546C7DC425CC17D900796E7A /* Rico Dinheirinho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rico Dinheirinho.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		546C7DC725CC17D900796E7A /* Rico_DinheirinhoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rico_DinheirinhoApp.swift; sourceTree = "<group>"; };
-		546C7DC925CC17D900796E7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		546C7DCB25CC17DA00796E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		546C7DCE25CC17DA00796E7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		546C7DD025CC17DA00796E7A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -53,6 +78,15 @@
 		546C7DEB25CC17DA00796E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		546C7DFA25CC18F500796E7A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		546C7E0325CC218200796E7A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		546C7E1B25CC252900796E7A /* ObjetivoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivoCell.swift; sourceTree = "<group>"; };
+		546C7E2325CC325500796E7A /* ObjetivosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivosView.swift; sourceTree = "<group>"; };
+		547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoObjetivoView.swift; sourceTree = "<group>"; };
+		548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoObjetivoView.swift; sourceTree = "<group>"; };
+		54972F3F25D6B775005FAFCC /* ObjetivosViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjetivosViewModelTests.swift; sourceTree = "<group>"; };
+		549EE7C125D42BAD004FFFE6 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		54ADB9EB25D2BEBF00CA1C9F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		54ADB9F025D2BF1600CA1C9F /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
+		54BD8EA225CD732800126F9E /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ADB9E125D2B40C00CA1C9F /* ToastUI in Frameworks */,
+				54ADB9E725D2BEB200CA1C9F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,17 +140,18 @@
 		546C7DC625CC17D900796E7A /* Rico Dinheirinho */ = {
 			isa = PBXGroup;
 			children = (
+				54ADB9F025D2BF1600CA1C9F /* animation.json */,
 				546C7E0225CC216600796E7A /* Extensions */,
 				546C7E0125CC215F00796E7A /* Model */,
 				546C7E0025CC215700796E7A /* ViewModel */,
-				546C7DFF25CC215200796E7A /* View */,
-				546C7DC725CC17D900796E7A /* Rico_DinheirinhoApp.swift */,
-				546C7DC925CC17D900796E7A /* ContentView.swift */,
+				546C7E1A25CC24FC00796E7A /* View */,
 				546C7DCB25CC17DA00796E7A /* Assets.xcassets */,
-				546C7DD025CC17DA00796E7A /* Persistence.swift */,
 				546C7DD525CC17DA00796E7A /* Info.plist */,
 				546C7DD225CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld */,
+				546C7DD025CC17DA00796E7A /* Persistence.swift */,
+				546C7DC725CC17D900796E7A /* Rico_DinheirinhoApp.swift */,
 				546C7DCD25CC17DA00796E7A /* Preview Content */,
+				543376C425D59BFB002597D2 /* LaunchScreen.storyboard */,
 			);
 			path = "Rico Dinheirinho";
 			sourceTree = "<group>";
@@ -132,6 +169,7 @@
 			children = (
 				546C7DDE25CC17DA00796E7A /* Rico_DinheirinhoTests.swift */,
 				546C7DE025CC17DA00796E7A /* Info.plist */,
+				54972F3F25D6B775005FAFCC /* ObjetivosViewModelTests.swift */,
 			);
 			path = "Rico DinheirinhoTests";
 			sourceTree = "<group>";
@@ -140,21 +178,19 @@
 			isa = PBXGroup;
 			children = (
 				546C7DE925CC17DA00796E7A /* Rico_DinheirinhoUITests.swift */,
+				540929A225D69DDE00EFBDD1 /* NovoObjetivoUITest.swift */,
+				540929BD25D6AA8800EFBDD1 /* NovoObjetivoSalvarUITest.swift */,
+				540929AA25D69EA800EFBDD1 /* DescricaoObjetivoRetirarUITest.swift */,
+				540929B525D6AA5D00EFBDD1 /* DescricaoObjetivoDepositarUITest.swift */,
 				546C7DEB25CC17DA00796E7A /* Info.plist */,
 			);
 			path = "Rico DinheirinhoUITests";
 			sourceTree = "<group>";
 		};
-		546C7DFF25CC215200796E7A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		546C7E0025CC215700796E7A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5409D28225D171860041AB4B /* ObjetivoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,6 +198,8 @@
 		546C7E0125CC215F00796E7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5432F40F25D169EC002AC871 /* Objetivo+CoreDataClass.swift */,
+				5432F41025D169EC002AC871 /* Objetivo+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,8 +208,22 @@
 			isa = PBXGroup;
 			children = (
 				546C7E0325CC218200796E7A /* Colors.swift */,
+				549EE7C125D42BAD004FFFE6 /* Keyboard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		546C7E1A25CC24FC00796E7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				546C7E1B25CC252900796E7A /* ObjetivoCell.swift */,
+				546C7E2325CC325500796E7A /* ObjetivosView.swift */,
+				548CC3F525CCBDC80098EF5A /* NovoObjetivoView.swift */,
+				54BD8EA225CD732800126F9E /* CustomPickerView.swift */,
+				547041DF25CF792E005D12D4 /* DescricaoObjetivoView.swift */,
+				54ADB9EB25D2BEBF00CA1C9F /* LottieView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +242,10 @@
 			dependencies = (
 			);
 			name = "Rico Dinheirinho";
+			packageProductDependencies = (
+				54ADB9E025D2B40C00CA1C9F /* ToastUI */,
+				54ADB9E625D2BEB200CA1C9F /* Lottie */,
+			);
 			productName = "Rico Dinheirinho";
 			productReference = 546C7DC425CC17D900796E7A /* Rico Dinheirinho.app */;
 			productType = "com.apple.product-type.application";
@@ -254,13 +310,17 @@
 			};
 			buildConfigurationList = 546C7DBF25CC17D900796E7A /* Build configuration list for PBXProject "Rico Dinheirinho" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				"pt-BR",
 				Base,
 			);
 			mainGroup = 546C7DBB25CC17D900796E7A;
+			packageReferences = (
+				54ADB9DF25D2B40C00CA1C9F /* XCRemoteSwiftPackageReference "ToastUI" */,
+				54ADB9E525D2BEB200CA1C9F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 546C7DC525CC17D900796E7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,6 +339,8 @@
 			files = (
 				546C7DCF25CC17DA00796E7A /* Preview Assets.xcassets in Resources */,
 				546C7DFB25CC18F500796E7A /* .gitignore in Resources */,
+				54ADB9F125D2BF1600CA1C9F /* animation.json in Resources */,
+				543376C525D59BFB002597D2 /* LaunchScreen.storyboard in Resources */,
 				546C7DCC25CC17DA00796E7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,10 +366,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548CC3F625CCBDC80098EF5A /* NovoObjetivoView.swift in Sources */,
 				546C7DD125CC17DA00796E7A /* Persistence.swift in Sources */,
+				549EE7C225D42BAD004FFFE6 /* Keyboard.swift in Sources */,
+				546C7E2425CC325500796E7A /* ObjetivosView.swift in Sources */,
 				546C7E0425CC218200796E7A /* Colors.swift in Sources */,
-				546C7DCA25CC17D900796E7A /* ContentView.swift in Sources */,
+				546C7E1C25CC252900796E7A /* ObjetivoCell.swift in Sources */,
+				547041E025CF792E005D12D4 /* DescricaoObjetivoView.swift in Sources */,
+				5432F41225D169EC002AC871 /* Objetivo+CoreDataProperties.swift in Sources */,
+				54BD8EA325CD732800126F9E /* CustomPickerView.swift in Sources */,
+				54ADB9EC25D2BEBF00CA1C9F /* LottieView.swift in Sources */,
+				5409D28325D171860041AB4B /* ObjetivoViewModel.swift in Sources */,
 				546C7DD425CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld in Sources */,
+				5432F41125D169EC002AC871 /* Objetivo+CoreDataClass.swift in Sources */,
 				546C7DC825CC17D900796E7A /* Rico_DinheirinhoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54972F4025D6B775005FAFCC /* ObjetivosViewModelTests.swift in Sources */,
 				546C7DDF25CC17DA00796E7A /* Rico_DinheirinhoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +397,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				546C7DEA25CC17DA00796E7A /* Rico_DinheirinhoUITests.swift in Sources */,
+				540929BE25D6AA8800EFBDD1 /* NovoObjetivoSalvarUITest.swift in Sources */,
+				540929B625D6AA5D00EFBDD1 /* DescricaoObjetivoDepositarUITest.swift in Sources */,
+				540929A325D69DDE00EFBDD1 /* NovoObjetivoUITest.swift in Sources */,
+				540929AB25D69EA800EFBDD1 /* DescricaoObjetivoRetirarUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -450,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -478,7 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ltuchoa.Rico-Dinheirinho";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -500,7 +576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ltuchoa.Rico-Dinheirinho";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -628,6 +704,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54ADB9DF25D2B40C00CA1C9F /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		54ADB9E525D2BEB200CA1C9F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54ADB9E025D2B40C00CA1C9F /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54ADB9DF25D2B40C00CA1C9F /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
+		};
+		54ADB9E625D2BEB200CA1C9F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54ADB9E525D2BEB200CA1C9F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		546C7DD225CC17DA00796E7A /* Rico_Dinheirinho.xcdatamodeld */ = {
