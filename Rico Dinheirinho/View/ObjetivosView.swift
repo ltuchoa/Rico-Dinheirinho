@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+struct AccentColorPreferenceKey: PreferenceKey {
+    typealias Value = Color?
+
+    static func reduce(value: inout Color?, nextValue: () -> Color?) {
+        guard let next = nextValue() else { return }
+        value = next
+    }
+}
+
 struct ObjetivosView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
@@ -14,6 +23,10 @@ struct ObjetivosView: View {
     @FetchRequest(entity: Objetivo.entity(), sortDescriptors: [NSSortDescriptor(key: "nome", ascending: true)])
     
     var objetivos: FetchedResults<Objetivo>
+
+    @State private var navAccentColor: Color? = nil
+
+    @State private var delay: Double = 0.4
 
     var body: some View {
         NavigationView {
@@ -27,7 +40,7 @@ struct ObjetivosView: View {
                         }
                     } else {
                         Text("Você não possui objetivos!")
-                            .font(.system(size: 24, weight: .regular, design: .default))
+                            .font(.system(size: 22, weight: .regular, design: .default)).opacity(0.8)
                             .padding(.vertical, UIScreen.main.bounds.height/3)
                     }
 
@@ -52,7 +65,10 @@ struct ObjetivosView: View {
                                     .foregroundColor(.primaryGreen)
             )
         }
-        .accentColor(.primaryGreen)
+        .accentColor(navAccentColor)
+        .onPreferenceChange(AccentColorPreferenceKey.self) {
+            self.navAccentColor = $0
+        }
     }
 }
 

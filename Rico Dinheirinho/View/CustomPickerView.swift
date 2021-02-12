@@ -15,7 +15,6 @@ struct CustomPickerView: View {
 
     var body: some View {
         ZStack {
-            Color.black.opacity(0.1)
             VStack(alignment: .leading) {
                 HStack {
                     Text("Selecione um ícone ")
@@ -50,19 +49,9 @@ struct CustomPickerView: View {
                                 .foregroundColor(.primaryGreen)
                         }
                     }
-                }.padding(.top, 10)
+                }.padding(.vertical, 10)
             }
-            .padding(.bottom, 20)
-            .background(Color(UIColor.secondarySystemBackground)).cornerRadius(20)
-            .padding(.horizontal, 30)
-//            .overlay(
-//                RoundedRectangle(cornerRadius: 20)
-//                    .stroke(Color.primaryGreen, lineWidth: 2)
-//                    .padding(.horizontal, 30)
-//            )
-            .shadow(color: Color(UIColor.label).opacity(0.1), radius: 2, x: 0, y: 2)
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -16,11 +16,11 @@ class ObjetivoViewModel: ObservableObject {
 
     var objetivos: FetchedResults<Objetivo>
 
-    func save(viewContext: NSManagedObjectContext, nome: String, valor: String, data: Date, icone: String) {
+    func save(viewContext: NSManagedObjectContext, nome: String, valor: Double, data: Date, icone: String) {
         let novoObjetivo = Objetivo(context: viewContext)
         novoObjetivo.id = UUID()
         novoObjetivo.nome = nome
-        novoObjetivo.valorTotal = Double(valor) ?? 0
+        novoObjetivo.valorTotal = valor
         novoObjetivo.valorDepositado = 0
         novoObjetivo.progress = 0
         novoObjetivo.data = data

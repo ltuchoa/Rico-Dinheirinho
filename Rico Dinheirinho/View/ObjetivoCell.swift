@@ -60,9 +60,9 @@ struct ProgressBar: View {
                     .opacity(1)
                     .foregroundColor(Color.white)
 
-                Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: geometry.size.height-2)
+                Rectangle().frame(width: (min(CGFloat(self.value)*geometry.size.width, geometry.size.width))-2, height: (geometry.size.height)-2)
                     .foregroundColor(Color.primaryGreen)
-                    .animation(.linear)
+                    .animation(Animation.linear(duration: 0))
                     .cornerRadius(40)
                     .padding(.leading, 1)
             }.cornerRadius(45.0)

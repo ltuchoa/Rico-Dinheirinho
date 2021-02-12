@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ToastUI
+import Combine
 
 struct DescricaoObjetivoView: View {
 
@@ -19,6 +20,21 @@ struct DescricaoObjetivoView: View {
     @State var modo: String = ""
 
     @State var objetivo = Objetivo()
+
+    var plantin: String {
+        switch objetivo.progress {
+        case 0.1...0.24:
+            return "Plantin1"
+        case 0.25...0.49:
+            return "Plantin2"
+        case 0.50...0.74:
+            return "Plantin3"
+        case 0.75...1:
+            return "Plantin4"
+        default:
+            return "Plantin0"
+        }
+    }
 
     var body: some View {
         VStack {
@@ -61,7 +77,9 @@ struct DescricaoObjetivoView: View {
                             ToastView {
                                 ToastViewContent(isShowing: $presentingAnimation, valor: $valor, presentingToast: $presentingToast, presentingAnimation: $presentingAnimation, objetivo: $objetivo, modo: $modo).environment(\.managedObjectContext, self.viewContext)
                             }
+                            .animation(.easeInOut(duration: 0.3))
                         }
+
 
                         Button(action: {
                             // What to perform
@@ -122,11 +140,21 @@ struct DescricaoObjetivoView: View {
                 }.padding([.trailing, .leading], 60)
                 .padding([.top, .bottom], 20)
                 Spacer()
-                Image("Plantin2")
+
+                Image(plantin)
                     .resizable()
                     .scaledToFit()
                     .padding(.bottom, -5)
-                    .frame(minWidth: 60, idealWidth: 90, maxWidth: 130, minHeight: 80, idealHeight: 160, maxHeight: 200, alignment: .bottom)
+                    .frame(minWidth: 60, idealWidth: 80, maxWidth: 100, minHeight: 80, idealHeight: 160, maxHeight: 320, alignment: .bottom)
+                    .transition(.opacity)
+                    .id(plantin)
+                    .transition(
+                        .asymmetric(
+                            insertion: AnyTransition.scale(scale: 1.1, anchor: .bottom),
+                            removal: .identity
+                        )
+                    )
+                    .animation(.easeInOut)
             }
 
         }
@@ -138,7 +166,30 @@ struct DescricaoObjetivoView: View {
                                 }
             .foregroundColor(.white)
         )
+        .preference(key: AccentColorPreferenceKey.self, value: Color.white)
         .edgesIgnoringSafeArea(.top)
+        .ignoresSafeArea(.keyboard, edges: .all)
+//        .onChange(of: objetivo.progress) { value in
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+//                withAnimation(.easeInOut(duration: 2)) {
+//                    switch value {
+//                    case 0.1...0.24:
+//                        self.plantin = "Plantin1"
+//                    case 0.25...0.49:
+//                        self.plantin = "Plantin2"
+//                    case 0.50...0.74:
+//                        self.plantin = "Plantin3"
+//                    case 0.75...1:
+//                        self.plantin = "Plantin4"
+//                    default:
+//                        self.plantin = "Plantin0"
+//                    }
+//                }
+//            }
+
+//        }
+
+
     }
 }
 
@@ -167,7 +218,7 @@ struct ProgressBar2: View {
 //                    .foregroundColor(Color.primaryGreen)
                     .background(LinearGradient(gradient: Gradient(colors: [.primaryGreen, .secondaryGreen]), startPoint: .topLeading, endPoint: .bottomTrailing))
                     .foregroundColor(.clear)
-                    .animation(.linear)
+                    .animation(Animation.easeInOut(duration: 0.9).delay(2.8))
                     .cornerRadius(40)
                     .padding(.leading, 1)
             }.cornerRadius(45.0)
@@ -183,6 +234,20 @@ struct ToastViewContent: View {
     @Binding var objetivo: Objetivo
     @Binding var modo: String
 
+    @State var deuRuim: Bool = false
+
+    var valorDeposit: Double {
+        return objetivo.valorDepositado + valorFormatted
+    }
+
+    var valorRetir: Double {
+        return objetivo.valorDepositado - valorFormatted
+    }
+
+    var valorFormatted: Double {
+        return (Double(valor) ?? 0) / 100
+    }
+
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject private var objetivoViewModel: ObjetivoViewModel = ObjetivoViewModel()
 
@@ -194,11 +259,20 @@ struct ToastViewContent: View {
                     .font(.system(size: 18, weight: .regular, design: .default))
                     .padding(.horizontal, 10)
 
-                TextField("Digite um valor", text: $valor)
-                    .keyboardType(.decimalPad)
-                    .textFieldStyle(BottomLineTextFieldStyle())
-                    .frame(minWidth: 80, idealWidth: 100, maxWidth: 200)
-                    .padding(.top, 15)
+                ZStack(alignment: .leading) {
+                    Text("R$ \(valorFormatted, specifier: "%.2f")").foregroundColor(.primaryGreen)
+                        .font(.system(size: 17, weight: .regular, design: .default))
+                        .padding(.top, 15)
+                    TextField("", text: $valor)
+                        .keyboardType(.numberPad)
+                        .textFieldStyle(BottomLineTextFieldStyle())
+                        .onReceive(Just(valor)) { _ in if valor.count > 11 {
+                                                    valor = String(valor.prefix(11))
+                                                }}
+                        .frame(minWidth: 80, idealWidth: 100, maxWidth: 200)
+                        .padding(.top, 15)
+                }
+
 
                 HStack(spacing: 20) {
                     Button(action: {
@@ -206,7 +280,7 @@ struct ToastViewContent: View {
                     }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(Color(UIColor.systemRed)).opacity(0.8)
+                                .foregroundColor(Color(UIColor.systemRed)).opacity(0.9)
                                 .frame(width: 90, height: 34)
                             Text("Cancelar")
                                 .foregroundColor(.white)
@@ -214,18 +288,51 @@ struct ToastViewContent: View {
                         }
                     }
 
+                    .toast(isPresented: $deuRuim) {
+                        ToastView {
+                            VStack {
+                                Text("Os valores estão conflitantes.")
+                                    .padding(.bottom)
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 200, height: 100)
+
+                                Button {
+                                    deuRuim = false
+                                } label: {
+                                    Text("OK")
+                                        .bold()
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal)
+                                        .padding(.vertical, 12.0)
+                                        .background(Color(UIColor.systemRed).opacity(0.9))
+                                        .cornerRadius(10)
+                                }.padding(.bottom, 10)
+                            }
+                        }
+                    }
+
                     Button(action: {
                         if modo == "Retirar" {
-                            objetivo.valorDepositado -= Double(valor) ?? 0
+                            if valorRetir < 0 {
+                                deuRuim = true
+                            } else {
+                                objetivo.valorDepositado -= valorFormatted
+                            }
                         } else {
-                            objetivo.valorDepositado += Double(valor) ?? 0
+                            if valorDeposit > objetivo.valorTotal {
+                                deuRuim = true
+                            } else {
+                                objetivo.valorDepositado += valorFormatted
+                            }
                         }
-                        objetivoViewModel.update(viewContext: viewContext, objetivo: objetivo)
-                        valor = ""
-                        presentingAnimation = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
-                            presentingToast = false
-                            presentingAnimation = false
+                        if !deuRuim {
+                            objetivoViewModel.update(viewContext: viewContext, objetivo: objetivo)
+                            valor = ""
+                            presentingAnimation = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+                                presentingToast = false
+                                presentingAnimation = false
+                            }
                         }
                     }) {
                         ZStack {
@@ -242,7 +349,9 @@ struct ToastViewContent: View {
                         }
                     }
                 }.padding(.top, 20)
-            }.padding(.vertical, 15)
+            }
+            .padding(.vertical, 15)
+            
         } else {
             LottieView(name: "animation", play: $isShowing)
                 .frame(width: 200, height: 200)
@@ -260,8 +369,8 @@ struct BottomLineTextFieldStyle: TextFieldStyle {
                 .foregroundColor(.primaryGreen)
                 .accentColor(.primaryGreen)
         }
-        .foregroundColor(.primaryGreen)
-        .accentColor(.primaryGreen)
+        .foregroundColor(.clear)
+        .accentColor(.clear)
     }
 }
 
