@@ -10,13 +10,9 @@ import CoreData
 
 class ObjetivoViewModel: ObservableObject {
 
-//    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(entity: Objetivo.entity(), sortDescriptors: [], predicate: NSPredicate())
-
     var objetivos: FetchedResults<Objetivo>
 
-    func save(viewContext: NSManagedObjectContext, nome: String, valor: Double, data: Date, icone: String) {
+    func save(viewContext: NSManagedObjectContext, nome: String, valor: Double, data: Date, icone: String) -> Bool {
         let novoObjetivo = Objetivo(context: viewContext)
         novoObjetivo.id = UUID()
         novoObjetivo.nome = nome
@@ -30,32 +26,36 @@ class ObjetivoViewModel: ObservableObject {
             try viewContext.save()
         } catch  {
             print(error.localizedDescription)
+            return false
         }
+        return true
     }
 
-    func update(viewContext: NSManagedObjectContext, objetivo: Objetivo) {
-        var objeto = viewContext.object(with: objetivo.objectID)
+    func update(viewContext: NSManagedObjectContext, objetivo: Objetivo) -> Bool {
 
         let progress = Float(objetivo.valorDepositado/objetivo.valorTotal)
         objetivo.progress = progress
-        objeto = objetivo
         
         do {
             try viewContext.save()
         } catch  {
             print(error.localizedDescription)
+            return false
         }
+        return true
 
     }
 
-    func delete(viewContext: NSManagedObjectContext, objetivo: Objetivo) {
+    func delete(viewContext: NSManagedObjectContext, objetivo: Objetivo) -> Bool {
         viewContext.delete(objetivo)
 
         do {
             try viewContext.save()
         } catch  {
             print(error.localizedDescription)
+            return false
         }
+        return true
     }
 
 
